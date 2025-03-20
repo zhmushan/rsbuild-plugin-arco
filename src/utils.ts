@@ -1,7 +1,10 @@
 // MIT https://github.com/arco-design/arco-plugins/blob/9c5998a6abbbed1e364788931d239adbf16136a6
 
 import fs from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
+
+const require = createRequire(import.meta.url);
 
 // #region utils/theme.ts
 // https://github.com/arco-design/arco-plugins/blob/9c5998a6abbbed1e364788931d239adbf16136a6/packages/unplugin-react/src/utils/theme.ts#L5-L60

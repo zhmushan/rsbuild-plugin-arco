@@ -1,4 +1,7 @@
+import { createRequire } from 'node:module';
 import type { RsbuildPlugin } from '@rsbuild/core';
+
+const require = createRequire(import.meta.url);
 
 export const PLUGIN_REPLACE_ARCO_ICON_NAME = 'plugin-replace-arco-icon';
 
