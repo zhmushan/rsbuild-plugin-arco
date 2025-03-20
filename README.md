@@ -33,6 +33,16 @@ export default defineConfig({
       },
     }),
   ],
+  source: {
+    transformImport: [
+      {
+        libraryName: "@arco-design/web-react",
+        libraryDirectory: "es",
+        style: true,
+        camelToDashComponentName: false,
+      },
+    ],
+  },
 });
 ```
 
@@ -70,5 +80,15 @@ export default defineConfig({
       include: /@arco-design\/web-react\/.*\.less$/,
     }),
   ],
+  source: {
+    transformImport: [
+      {
+        libraryName: "@arco-design/web-react",
+        libraryDirectory: "es",
+        style: true,
+        camelToDashComponentName: false,
+      },
+    ],
+  },
 });
 ```

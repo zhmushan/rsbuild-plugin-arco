@@ -93,7 +93,6 @@ export const pluginArcoTheme = ({
 
         return [
           code,
-          `@import '~${theme}/theme.less';`,
           `@import '~${theme}/tokens.less';`,
           `@import '~${themeResource}';`,
         ].join('\n');
