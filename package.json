@@ -1,0 +1,37 @@
+{
+  "name": "rsbuild-plugin-arco",
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.6.4",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest",
+    "ci": "biome ci && vitest run"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@rsbuild/core": "^1.2.19",
+    "@rsbuild/plugin-less": "^1.1.1",
+    "@rslib/core": "^0.5.4",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "peerDependencies": {
+    "@rsbuild/core": "1.x"
+  }
+}
